@@ -20,7 +20,7 @@ public class StaffDutiesDAO  extends BaseDAO{
                 .addEntity(StaffDuties.class)
                 .setParameter("p_stp_id",staffDuty.getPosition().getId())
                 .setParameter("p_description",staffDuty.getDescription())
-                .setParameter("p_user_id",2L)
+                .setParameter("p_user_id",22L)
                 .executeUpdate();
     }
     public void update(StaffDuties staffDuty) {
@@ -30,7 +30,7 @@ public class StaffDutiesDAO  extends BaseDAO{
                 .setParameter("p_id",staffDuty.getId())
                 .setParameter("p_stp_id",staffDuty.getPosition().getId())
                 .setParameter("p_description",staffDuty.getDescription())
-                .setParameter("p_user_id",2L)
+                .setParameter("p_user_id",22L)
                 .executeUpdate();
     }
 

@@ -36,17 +36,17 @@ public class Staff {
     private String address;
 
     @ManyToOne
-    @JoinColumn(name = "TYPE_ID", nullable = false)
+    @JoinColumn(name = "TYPE_ID", nullable = true)
     private StaffType position;
-
+/*
     @OneToMany(mappedBy = "worker")
     private Set<AnimalFeeds> animalFeeds;
 
     @OneToMany(mappedBy = "worker")
-    private Set<CageClean> cageClean;
+    private Set<CageClean> cageClean;*/
 
     @ManyToOne
-    @JoinColumn(name = "USER_ID", nullable = false)
+    @JoinColumn(name = "USER_ID", nullable = true)
     private User user;
 
     public Long getId() {
@@ -130,7 +130,7 @@ public class Staff {
         return this;
     }
 
-    public Set<AnimalFeeds> getAnimalFeeds() {
+   /* public Set<AnimalFeeds> getAnimalFeeds() {
         return animalFeeds;
     }
 
@@ -146,7 +146,7 @@ public class Staff {
     public Staff setCageClean(Set<CageClean> cageClean) {
         this.cageClean = cageClean;
         return this;
-    }
+    }*/
     public String getFullName() {
         return firstName + " " + lastName;
     }

@@ -9,6 +9,7 @@ import lv.autentica.exception.StaffException;
 import lv.autentica.service.staff.StaffService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
@@ -68,11 +69,12 @@ public class StaffController {
     }
 
     @RequestMapping(value = "/staff/{id}/edit", method = RequestMethod.GET)
+    @Transactional
     public ModelAndView editStaff(@PathVariable("id") Long id,Model model) {
         ModelAndView modelAndView = new ModelAndView("editStaff");
         Staff staff = staffDAO.get(Staff.class,id);
         StaffDTO worker = new StaffDTO(staff);
-        model.addAttribute("worker", worker);
+        modelAndView.addObject("worker", worker);
         modelAndView.addObject("staffTypes", staffTypeDAO.getAll());
         return  modelAndView;
     }

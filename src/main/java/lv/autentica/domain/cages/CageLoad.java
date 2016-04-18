@@ -27,8 +27,11 @@ public class CageLoad {
     @JoinColumn(name = "USER_ID", nullable = false)
     private User user;
 
-    /*@OneToMany(mappedBy="cage")
-    private Set<Animal> animals;*/
+    @OneToMany(mappedBy="cage")
+    private Set<Animal> animals;
+
+    @Transient
+    private String animalsList;
 
     public Long getId() {
         return id;
@@ -54,11 +57,19 @@ public class CageLoad {
         this.user = user;
     }
 
-    /*public Set<Animal> getAnimals() {
+    public Set<Animal> getAnimals() {
         return animals;
     }
 
     public void setAnimals(Set<Animal> animals) {
         this.animals = animals;
-    }*/
+    }
+
+    public String getAnimalsList() {
+        return animalsList;
+    }
+
+    public void setAnimalsList(String animalsList) {
+        this.animalsList = animalsList;
+    }
 }

@@ -18,7 +18,7 @@ public class AnimalTypeDAO extends BaseDAO {
                 .createSQLQuery("CALL ZOO_ADM_UTILITY.ADD_ANIMAL_TYPE(:p_parent_id,:p_type_name, :p_user_id)")
                 .setParameter("p_parent_id",animalType.getBaseType().getId())
                 .setParameter("p_type_name",animalType.getTypeName())
-                .setParameter("p_user_id",2L)
+                .setParameter("p_user_id",22L)
                 .executeUpdate();
     }
 
@@ -28,7 +28,7 @@ public class AnimalTypeDAO extends BaseDAO {
                 .setParameter("p_id",animalType.getId())
                 .setParameter("p_parent_id",animalType.getBaseType().getId())
                 .setParameter("p_type_name",animalType.getTypeName())
-                .setParameter("p_user_id",2L)
+                .setParameter("p_user_id",22L)
                 .executeUpdate();
     }
     public void delete(AnimalType animalType) {

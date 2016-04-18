@@ -20,7 +20,7 @@ public class CageTypeDAO extends BaseDAO {
                 .addEntity(CageType.class)
                 .setParameter("p_atp_id", cageType.getAnimalType().getId())
                 .setParameter("p_type_name", cageType.getCageType())
-                .setParameter("p_user_id",2L)
+                .setParameter("p_user_id",22L)
                 .executeUpdate();
     }
 
@@ -31,7 +31,7 @@ public class CageTypeDAO extends BaseDAO {
                 .setParameter("p_id", cageType.getId())
                 .setParameter("p_atp_id", cageType.getAnimalType().getId())
                 .setParameter("p_type_name", cageType.getCageType())
-                .setParameter("p_user_id",2L)
+                .setParameter("p_user_id",22L)
                 .executeUpdate();
     }
 

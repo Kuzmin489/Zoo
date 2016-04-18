@@ -21,14 +21,16 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>Cage</h1>
+                    <h1>Cage Load</h1>
 
                     <c:if test="${!empty cageLoads}">
                         <table class="table table-striped table-list-search">
                             <thead>
                             <tr>
-                                <th>Name</th>
-                                <th>Animals</th>
+                                <th>Cage Name</th>
+                                <th>Cage Type</th>
+                                <th>Animal Name</th>
+                                <th>Animal Type</th>
                                 <th>Last Modified</th>
                             </tr>
                             </thead>
@@ -38,6 +40,16 @@
                                              class="lv.autentica.domain.cages.CageLoad" scope="page"/>
                                 <tr>
                                     <td>${cage.cage.name}</td>
+                                    <td>${cage.cage.cageType.cageType}</td>
+                                    <td><c:forEach items="${cage.cage.animals}" var="animal">
+                                        ${animal.name}<br>
+                                    </c:forEach>
+                                    </td>
+                                    <td><c:forEach items="${cage.cage.animals}" var="animal">
+
+                                        ${animal.animalType.typeName}<br>
+                                    </c:forEach>
+                                    </td>
                                     <td>${cage.user.login}</td>
                                     <td>
                                         <div class='pull-right'>
@@ -51,7 +63,7 @@
                         </table>
                     </c:if>
 
-                    <button type="button" class="btn btn-primary" onclick="window.location.href='/cage/load/add'">Add Cage</button>
+                    <button type="button" class="btn btn-primary" onclick="window.location.href='/cage/load/add'">Add Cage Load</button>
                 </div>
             </div>
         </div>

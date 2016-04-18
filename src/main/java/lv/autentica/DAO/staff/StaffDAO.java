@@ -28,14 +28,14 @@ public class StaffDAO extends BaseDAO {
                 .setParameter("p_address",worker.getAddress())
                 .setParameter("p_phone",worker.getPhone())
                 .setParameter("p_salary",worker.getSalary())
-                .setParameter("p_user_id",2L)
+                .setParameter("p_user_id",22L)
                 .executeUpdate();
     }
 
     public void update(Staff worker) {
         sessionFactory.getCurrentSession()
                 .createSQLQuery("CALL ZOO_ADM_UTILITY.UPD_STAFF(:p_id,:p_type_id, :p_first_name, :p_last_name," +
-                        ":p_soc_sec_num,:p_address,:p_phone,:p_salary )")
+                        ":p_soc_sec_num,:p_address,:p_phone,:p_salary,:p_user_id  )")
                 .addEntity(Staff.class)
                 .setParameter("p_id",worker.getId())
                 .setParameter("p_type_id", worker.getPosition().getId())
@@ -45,6 +45,7 @@ public class StaffDAO extends BaseDAO {
                 .setParameter("p_address",worker.getAddress())
                 .setParameter("p_phone",worker.getPhone())
                 .setParameter("p_salary",worker.getSalary())
+                .setParameter("p_user_id",22L)
                 .executeUpdate();
     }
 

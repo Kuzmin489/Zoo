@@ -21,9 +21,9 @@ public class Animal {
     @JoinColumn(name = "TYPE_ID", nullable = false)
     private AnimalType animalType;
 
-    /*@ManyToOne
-    @JoinColumn(name = "CAGE_ID", nullable = false)
-    private Cage cage;*/
+    @ManyToOne
+    @JoinColumn(name = "CAGE_ID", nullable = true)
+    private Cage cage;
 
     @ManyToOne
     @JoinColumn(name = "USER_ID", nullable = false)
@@ -47,8 +47,8 @@ public class Animal {
     @Column(name = "COMMENTS", columnDefinition = "VARCHAR2(500)")
     private String comments;
 
-    @OneToMany(mappedBy = "animal")
-    private Set<AnimalFeeds> animalFeeds;
+/*    @OneToMany(mappedBy = "animal")
+    private Set<AnimalFeeds> animalFeeds;*/
 
     public Long getId() {
         return id;
@@ -113,14 +113,14 @@ public class Animal {
     public void setComments(String comments) {
         this.comments = comments;
     }
-
+/*
     public Set<AnimalFeeds> getAnimalFeeds() {
         return animalFeeds;
     }
 
     public void setAnimalFeeds(Set<AnimalFeeds> animalFeeds) {
         this.animalFeeds = animalFeeds;
-    }
+    }*/
 
     public String getName() {
         return name;
@@ -130,11 +130,11 @@ public class Animal {
         this.name = name;
     }
 
-/*    public Cage getCage() {
+    public Cage getCage() {
         return cage;
     }
 
     public void setCage(Cage cage) {
         this.cage = cage;
-    }*/
+    }
 }

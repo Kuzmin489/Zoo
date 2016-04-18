@@ -34,7 +34,7 @@
                         </div>
                         <div class="form-group">
                             <label for="input-ssn">SSN</label>
-                            <form:input id="input-ssn" path="ssn required="required"" type="number" class="form-control" placeholder="SSN"/>
+                            <form:input id="input-ssn" path="ssn" required="required" type="number" class="form-control" placeholder="SSN"/>
                         </div>
                         <div class="form-group">
                             <label for="input-phone">Phone</label>

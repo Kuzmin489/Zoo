@@ -21,7 +21,7 @@ public class StaffTypeDAO extends BaseDAO {
                 .addEntity(StaffType.class)
                 .setParameter("p_parent_id", staffType.getManager().getId())
                 .setParameter("p_type_name", staffType.getTypeName())
-                .setParameter("p_user_id",2L)
+                .setParameter("p_user_id",22L)
                 .executeUpdate();
     }
 
@@ -32,7 +32,7 @@ public class StaffTypeDAO extends BaseDAO {
                 .setParameter("p_id",staffType.getId())
                 .setParameter("p_parent_id", staffType.getManager().getId())
                 .setParameter("p_type_name", staffType.getTypeName())
-                .setParameter("p_user_id",2L)
+                .setParameter("p_user_id",22L)
                 .executeUpdate();
     }
 

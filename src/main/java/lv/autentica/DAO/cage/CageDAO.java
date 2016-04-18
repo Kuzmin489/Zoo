@@ -24,7 +24,7 @@ public class CageDAO extends BaseDAO {
                 .setParameter("p_type_id", cage.getCageType().getId())
                 .setParameter("p_name", cage.getName())
                 .setParameter("p_capacity",cage.getCapacity())
-                .setParameter("p_user_id",2L)
+                .setParameter("p_user_id",22L)
                 .executeUpdate();
     }
 
@@ -36,7 +36,7 @@ public class CageDAO extends BaseDAO {
                 .setParameter("p_type_id", cage.getCageType().getId())
                 .setParameter("p_name", cage.getName())
                 .setParameter("p_capacity",cage.getCapacity())
-                .setParameter("p_user_id",2L)
+                .setParameter("p_user_id",22L)
                 .executeUpdate();
     }
 

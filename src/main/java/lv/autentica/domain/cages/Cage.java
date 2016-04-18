@@ -28,8 +28,8 @@ public class Cage {
     @OneToMany(mappedBy = "cage")
     private Set<CageClean> cageClean;
 
-    /*@OneToMany(mappedBy="cage")
-    private Set<Animal> animals;*/
+    @OneToMany(fetch = FetchType.EAGER, mappedBy="cage",cascade = CascadeType.ALL)
+    private Set<Animal> animals;
 
 
     @Column(name = "NAME", columnDefinition = "VARCHAR2(100)")
@@ -86,11 +86,11 @@ public class Cage {
         this.cageClean = cageClean;
     }
 
-    /*public Set<Animal> getAnimals() {
+    public Set<Animal> getAnimals() {
         return animals;
     }
 
     public void setAnimals(Set<Animal> animals) {
         this.animals = animals;
-    }*/
+    }
 }

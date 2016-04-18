@@ -20,7 +20,7 @@ public class CageCleanDAO extends BaseDAO {
                 .addEntity(CageClean.class)
                 .setParameter("p_staff_id", cageClean.getWorker().getId())
                 .setParameter("p_cage_id", cageClean.getCage().getId())
-                .setParameter("p_user_id",2L)
+                .setParameter("p_user_id",22L)
                 .executeUpdate();
     }
 
@@ -31,7 +31,7 @@ public class CageCleanDAO extends BaseDAO {
                 .setParameter("p_id", cageClean.getId())
                 .setParameter("p_staff_id", cageClean.getWorker().getId())
                 .setParameter("p_cage_id", cageClean.getCage().getId())
-                .setParameter("p_user_id",2L)
+                .setParameter("p_user_id",22L)
                 .executeUpdate();
     }
 

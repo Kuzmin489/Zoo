@@ -24,7 +24,7 @@ public class AnimalDAO extends BaseDAO {
                 .setParameter("p_weight_kg",animal.getWeight())
                 .setParameter("p_features",animal.getFeatures())
                 .setParameter("p_comments",animal.getComments())
-                .setParameter("p_user_id",2L)
+                .setParameter("p_user_id",22L)
                 .executeUpdate();
     }
 
@@ -40,7 +40,7 @@ public class AnimalDAO extends BaseDAO {
                 .setParameter("p_weight_kg",animal.getWeight())
                 .setParameter("p_features",animal.getFeatures())
                 .setParameter("p_comments",animal.getComments())
-                .setParameter("p_user_id",2L)
+                .setParameter("p_user_id",22L)
                 .executeUpdate();
     }
     public void delete(Animal animal) {

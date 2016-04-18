@@ -19,7 +19,7 @@ public class AnimalFeedsDAO extends BaseDAO {
                 .createSQLQuery("CALL ZOO_ADM_UTILITY.ADD_ANIMAL_FEED(:p_animal_id,:p_staff_id, :p_user_id)")
                 .setParameter("p_animal_id",animalFeed.getAnimal().getId())
                 .setParameter("p_staff_id",animalFeed.getWorker().getId())
-                .setParameter("p_user_id",2L)
+                .setParameter("p_user_id",22L)
                 .executeUpdate();
     }
 
@@ -29,7 +29,7 @@ public class AnimalFeedsDAO extends BaseDAO {
                 .setParameter("p_id",animalFeed.getId())
                 .setParameter("p_animal_id",animalFeed.getAnimal().getId())
                 .setParameter("p_staff_id",animalFeed.getWorker().getId())
-                .setParameter("p_user_id",2L)
+                .setParameter("p_user_id",22L)
                 .executeUpdate();
     }
 

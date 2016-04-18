@@ -41,7 +41,7 @@
             <a href="/cage/clean">Cages Cleaning</a>
         </li>
         <li>
-            <a href="/cage/loading">Cages Loading</a>
+            <a href="/cage/load">Cages Loading</a>
         </li>
     </ul>
 </div>

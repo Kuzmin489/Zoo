@@ -3,11 +3,13 @@ package lv.autentica.controllres.cage;
 import lv.autentica.DAO.cage.CageDAO;
 import lv.autentica.DAO.cage.CageTypeDAO;
 import lv.autentica.domain.cages.Cage;
+import lv.autentica.domain.cages.CageLoad;
 import lv.autentica.dto.cage.CageDTO;
 import lv.autentica.exception.CageException;
 import lv.autentica.service.cage.CageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,6 +17,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import java.util.List;
 
 @Controller
 public class CageController {
@@ -71,6 +75,7 @@ public class CageController {
     }
 
     @RequestMapping(value = "/cage/{id}/edit", method = RequestMethod.GET)
+    @Transactional
     public ModelAndView editStaff(@PathVariable("id") Long id,Model model) {
         ModelAndView modelAndView = new ModelAndView("editCage");
         Cage cage = cageDAO.get(Cage.class,id);
