@@ -1,6 +1,8 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
+    
+    
 <head>
     <title>Zoo</title>
     <script src="${pageContext.request.contextPath}/resources/js/table-filter.js"></script>
@@ -14,6 +16,7 @@
 <body>
 
 <div id="wrapper">
+    <br>
     <jsp:include page="/menu.jsp"/>
     <div id="page-content-wrapper">
         <div class="container-fluid">
